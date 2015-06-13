@@ -10,34 +10,33 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-        <!--<activity-->
-            <!--android:name=".AllPages"-->
-            <!--android:label="@string/title_activity_allpages" >-->
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
-        <!--</activity>-->
+        <!-- <activity -->
+        <!-- android:name=".AllPages" -->
+        <!-- android:label="@string/title_activity_allpages" > -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
 
         <activity
             android:name=".RegisterActivity"
             android:label="@string/title_activity_register"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme">
-            <!--<meta-data-->
-                <!--android:name="android.support.PARENT_ACTIVITY"-->
-                <!--android:value="com.nokash.nokash.MainActivity" />-->
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:theme="@style/AppTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nokash.nokash.MainActivity" />
+        </activity>
+        <activity
+            android:name=".SummaryActivity"
+            android:label="@string/title_activity_summary" >
         </activity>
     </application>
 
