@@ -1,12 +1,151 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.nokash.nokash.PayActivity">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.nokash.nokash.PayActivity"
+    android:background="@color/primary">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/primary_dark"
+        android:orientation="horizontal"
 
-</RelativeLayout>
+        android:paddingLeft="16dp">
+
+        <!-- inbox -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:background="@color/primary_dark"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp">
+
+            <ImageButton
+                android:id="@+id/profile_notification_icon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:adjustViewBounds="true"
+                android:background="@color/primary_dark"
+                android:padding="16dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/notification"
+
+                />
+
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentRight="false"
+                android:layout_alignRight="@+id/profile_notification_icon"
+                android:layout_alignTop="@+id/profile_notification_icon"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/oval"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+
+        <!-- action bar title-->
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:src="@drawable/nokash_logo"
+            android:text="Profile"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/yellow_gradient"
+            android:gravity="center"
+            android:text="1198.00"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp"
+        >
+
+        <EditText
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="#68B2E3"
+            android:gravity="center_vertical|center_horizontal"
+            android:hint="Enter name, email, phone number"
+            android:inputType="textAutoComplete"
+            android:padding="16dp"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"/>
+        <EditText
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="#68B2E3"
+            android:gravity="center_vertical|center_horizontal"
+            android:hint="What is it for?"
+            android:inputType="text"
+            android:padding="16dp"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"/>
+        <EditText
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="#68B2E3"
+            android:gravity="center_vertical|center_horizontal"
+            android:hint="Amount"
+            android:inputType="numberDecimal"
+            android:padding="16dp"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="16dp"
+                android:layout_centerInParent="true">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginRight="8dp"
+                    android:text="Pay"
+                    android:background="@drawable/yellow_gradient_round_corner_rect"
+                    />
+                <Button
+                    android:layout_marginLeft="8dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Request"
+                    android:background="@drawable/yellow_gradient_round_corner_rect"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
