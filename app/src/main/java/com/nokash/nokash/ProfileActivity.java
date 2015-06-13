@@ -1,50 +1,35 @@
 package com.nokash.nokash;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
+import android.widget.ImageButton;
 
 
-public class MainActivity extends ActionBarActivity {
+public class ProfileActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_profile);
 
-        TextView registerTextView= (TextView) findViewById(R.id.registerTextView);
-        registerTextView.setOnClickListener(new View.OnClickListener() {
+        ImageButton imageButton=(ImageButton) findViewById(R.id.payRequsetBtn);
+        imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), RegisterActivity.class);
+                Intent intent=new Intent(getApplicationContext(), PayActivity.class);
                 startActivity(intent);
             }
         });
-
-        Button button=(Button) findViewById(R.id.loginBtn);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), ProfileActivity.class);
-                startActivity(intent);
-            }
-        });
-
-
     }
-
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-//        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_summary, menu);
         return true;
     }
 
