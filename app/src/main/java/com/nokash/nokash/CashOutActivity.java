@@ -1,9 +1,11 @@
 package com.nokash.nokash;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -26,6 +28,10 @@ public class CashOutActivity extends ActionBarActivity {
 
 
 
+    }
+
+    public void goBack(View v){
+        finish();
     }
 
     @Override

@@ -4,10 +4,12 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.animation.AlphaAnimation;
 
 
 public class TopUpActivity extends ActionBarActivity {
-
+    private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.4F);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +21,11 @@ public class TopUpActivity extends ActionBarActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_top_up, menu);
         return true;
+    }
+
+    public void goBack(View v){
+        v.startAnimation(buttonClick);
+        finish();
     }
 
     @Override

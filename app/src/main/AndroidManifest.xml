@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.nokash.nokash" >
+
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -57,6 +59,14 @@
         <activity
             android:name=".TopUpActivity"
             android:label="@string/title_activity_top_up"
+            android:parentActivityName=".ProfileActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nokash.nokash.ProfileActivity" />
+        </activity>
+        <activity
+            android:name=".TransactionActivity"
+            android:label="@string/title_activity_transaction"
             android:parentActivityName=".ProfileActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

@@ -10,7 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="64dp"
         android:background="@color/primary_dark"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:elevation="8dp">
 
         <!-- inbox -->
         <RelativeLayout
@@ -32,6 +33,7 @@
                 android:paddingTop="16dp"
                 android:scaleType="center"
                 android:src="@drawable/back_arrow"
+                android:onClick="goBack"
 
                 />
 
@@ -39,16 +41,16 @@
         </RelativeLayout>
 
         <!-- action bar title-->
-        <ImageView
+        <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginRight="16dp"
             android:layout_weight="2"
             android:gravity="center"
+            android:textSize="22sp"
             android:paddingBottom="8dp"
             android:paddingTop="8dp"
-            android:src="@drawable/nokash_logo"
-            android:text="Profile"
+            android:text="Cash Out"
             android:textColor="@android:color/white" />
 
         <TextView
@@ -74,7 +76,7 @@
             android:layout_weight="1"
             android:background="@drawable/yellow_gradient"
             android:gravity="center"
-            android:text="1198.00"
+            android:text="Current Balance : 1198.00"
             android:textColor="@android:color/white"
             android:textSize="16sp" />
 

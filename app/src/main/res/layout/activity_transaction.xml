@@ -1,0 +1,80 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    android:orientation="vertical"
+    tools:context="com.nokash.nokash.PayActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/primary_dark"
+        android:orientation="horizontal"
+        android:elevation="8dp">
+
+        <!-- inbox -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_weight="0"
+            android:background="@color/primary_dark"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp">
+
+            <ImageButton
+                android:id="@+id/back_arrow_icon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:adjustViewBounds="true"
+                android:background="@color/primary_dark"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp"
+                android:scaleType="center"
+                android:src="@drawable/back_arrow"
+                android:onClick="goBack"
+
+                />
+
+
+        </RelativeLayout>
+
+        <!-- action bar title-->
+        <TextView
+            android:elevation="8dp"
+            android:textSize="22sp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="16dp"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:src="@drawable/nokash_logo"
+            android:text="Transaction"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/lightBlueBackground"
+        android:dividerHeight="1dp"
+        android:background="@color/primary"
+        ></ListView>
+
+
+</LinearLayout>

@@ -6,20 +6,25 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
 import android.widget.ImageButton;
 
 
 public class ProfileActivity extends ActionBarActivity {
+    private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.4F);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
+
+
         ImageButton imageButton=(ImageButton) findViewById(R.id.payRequsetBtn);
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                v.startAnimation(buttonClick);
                 Intent intent = new Intent(getApplicationContext(), PayActivity.class);
                 startActivity(intent);
             }
@@ -29,6 +34,7 @@ public class ProfileActivity extends ActionBarActivity {
         topUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                v.startAnimation(buttonClick);
                 Intent intent=new Intent(getApplicationContext(), TopUpActivity.class);
                 startActivity(intent);
             }
@@ -38,7 +44,29 @@ public class ProfileActivity extends ActionBarActivity {
         cashOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                v.startAnimation(buttonClick);
                 Intent intent=new Intent(getApplicationContext(), CashOutActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        ImageButton transaction=(ImageButton) findViewById(R.id.profile_transaction);
+        transaction.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                v.startAnimation(buttonClick);
+                Intent intent=new Intent(getApplicationContext(), TransactionActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageButton profile_notification=(ImageButton) findViewById(R.id.profile_notification_icon);
+        profile_notification.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                v.startAnimation(buttonClick);
+                Intent intent=new Intent(getApplicationContext(), TransactionActivity.class);
                 startActivity(intent);
             }
         });
