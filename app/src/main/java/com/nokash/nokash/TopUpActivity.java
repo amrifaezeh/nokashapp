@@ -5,33 +5,19 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
-import java.util.ArrayList;
-
-
-public class CashOutActivity extends ActionBarActivity {
+public class TopUpActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cash_out);
-
-        int[] id={1,2,3};
-        String[] bankName= {"RHB", "Maybank", "CitiBank"};
-        String[] accountNumber={"112-300-23739263", "8238-714-383833", "739737-282-0234"};
-
-
-
-
+        setContentView(R.layout.activity_top_up);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_cash_out, menu);
+        getMenuInflater().inflate(R.menu.menu_top_up, menu);
         return true;
     }
 

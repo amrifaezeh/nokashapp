@@ -165,6 +165,7 @@
                 android:orientation="vertical"
                 android:gravity="center">
                 <ImageButton
+                    android:id="@+id/top_up_imageBtn"
                     android:layout_width="72dp"
                     android:layout_height="72dp" />
                 <TextView
@@ -184,7 +185,8 @@
                 android:gravity="center">
                 <ImageButton
                     android:layout_width="72dp"
-                    android:layout_height="72dp" />
+                    android:layout_height="72dp"
+                    android:id="@+id/cash_out_imagebtn" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

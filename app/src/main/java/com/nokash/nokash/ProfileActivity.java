@@ -20,7 +20,25 @@ public class ProfileActivity extends ActionBarActivity {
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), PayActivity.class);
+                Intent intent = new Intent(getApplicationContext(), PayActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageButton topUp=(ImageButton) findViewById(R.id.top_up_imageBtn);
+        topUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(), TopUpActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageButton cashOut=(ImageButton) findViewById(R.id.cash_out_imagebtn);
+        cashOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(), CashOutActivity.class);
                 startActivity(intent);
             }
         });
