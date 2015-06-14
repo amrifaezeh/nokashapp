@@ -116,7 +116,7 @@
         android:layout_weight="1"
         android:background="@color/lightBlueBackground"
         android:gravity="center"
-        android:text="1198.88"
+        android:text="1198.00"
         android:textColor="@android:color/white"
         android:textSize="20sp"
         android:textStyle="bold" />
@@ -225,6 +225,7 @@
                 android:orientation="vertical"
                 android:gravity="center">
                 <ImageButton
+                    android:id="@+id/profile_contacts"
                     android:layout_width="72dp"
                     android:layout_height="72dp"
                     android:src="@drawable/contacts"
